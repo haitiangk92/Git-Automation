@@ -4,7 +4,7 @@ import time
 os.system("pwd >> temp.txt")
 
 repoName = open("temp.txt", "r").readlines()[0].split("/")[-1].strip()
-createRepo = f"curl -H \"Authorization: token $GIT_TOKEN\" https://api.github.com/user/repos -d '{{\"name\": \"{repoName}\"}}'"
+createRepo = f"curl -H \"Authorization: token $GIT_TOKEN\" https://api.github.com/user/repos -d '{{\"name\": \"{repoName}\"}}'".replace(" ","-")
 os.system("rm temp.txt")
 os.system(createRepo)
 
