@@ -3,7 +3,11 @@ import time
 import sys
 
 try:
-    commitMessage = sys.argv[1:len(sys.argv)]
+    commitMessage = ""
+
+    for string in sys.argv[1:len(sys.argv)]:
+        commitMessage += f"{string} "
+
     print(f"Committing with message: {commitMessage}")
 except:
     print("\nNo Commit Messsage Detected\n".upper())
