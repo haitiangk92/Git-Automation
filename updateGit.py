@@ -18,4 +18,4 @@ print("\nFiles Committed\n")
 time.sleep(1)
 
 os.system("git push -u origin master")
-print("\n\n**Complete***\n\n")
+print("\n\n***Complete***\n\n")
